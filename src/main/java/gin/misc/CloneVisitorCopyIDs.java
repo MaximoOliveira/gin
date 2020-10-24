@@ -453,8 +453,7 @@ public class CloneVisitorCopyIDs extends CloneVisitor {
     public Visitable visit(final BinaryExpr n, final Object arg) {
         Integer id = n.getData(SourceFileTree.NODEKEY_ID);
         if (nodesToReplace.containsKey(id)) {
-            Node r = nodesToReplace.get(id);
-            return r;
+            return nodesToReplace.get(id);
         }
 
         Visitable r = checkForReplacement(n);
@@ -690,9 +689,8 @@ public class CloneVisitorCopyIDs extends CloneVisitor {
     public Visitable visit(final UnaryExpr n, final Object arg) {
         Integer id = n.getData(SourceFileTree.NODEKEY_ID);
         if (nodesToReplace.containsKey(id)) {
-            Node r = nodesToReplace.get(id);
             //r.setData(SourceFileTree.NODEKEY_ID, id);
-            return r;
+            return nodesToReplace.get(id);
         }
 
         Visitable r = checkForReplacement(n);
@@ -1119,12 +1117,7 @@ public class CloneVisitorCopyIDs extends CloneVisitor {
 
     private Node checkForReplacement(Node n) {
         Integer id = n.getData(SourceFileTree.NODEKEY_ID);
-        if (nodesToReplace.containsKey(id)) {
-            Node r = nodesToReplace.get(id);
-            return r;
-        } else {
-            return null;
-        }
+        return nodesToReplace.getOrDefault(id, null);
     }
 
 }

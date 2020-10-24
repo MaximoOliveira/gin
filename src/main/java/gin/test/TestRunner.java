@@ -118,8 +118,7 @@ public abstract class TestRunner {
         normalisedPatched = normalisedPatched.replaceAll("\\s+", " ");
         normalisedOriginal = normalisedOriginal.toString().replaceAll("\\s+", " ");
         normalisedOriginal = normalisedOriginal.toString().replaceAll("\\s+", " ");
-        boolean noOp = normalisedPatched.equals(normalisedOriginal);
-        return noOp;
+        return normalisedPatched.equals(normalisedOriginal);
     }
 
 }

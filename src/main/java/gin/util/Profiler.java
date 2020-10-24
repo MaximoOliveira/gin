@@ -368,8 +368,7 @@ public class Profiler {
         String cleanTest = testName.replace(" ", "_");
         String filename = cleanTest + "_" + rep + ".hprof";
         String filenameNoBrackets = filename.replace("()", "");
-        File hprof = new File(workingDir, filenameNoBrackets);
-        return  hprof;
+        return new File(workingDir, filenameNoBrackets);
     }
 
     private void ensureWorkingDirectory() {

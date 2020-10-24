@@ -162,10 +162,8 @@ public class InternalTestRunner extends TestRunner {
         if (threadsAfter != threadsBefore) {
             Logger.warn("Possible hanging threads remain after test");
         }
-        
-        UnitTestResult res = (UnitTestResult) result;
 
-        return res;
+        return (UnitTestResult) result;
 
     }
 

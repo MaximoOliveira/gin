@@ -250,9 +250,7 @@ public class TestCaseGenerator {
 
                 allClasses.removeIf(Objects::isNull);
 
-                String[] allClassNames = allClasses.toArray(new String[0]);
-
-                return allClassNames;
+        return allClasses.toArray(new String[0]);
 
         }
 

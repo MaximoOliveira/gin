@@ -426,9 +426,8 @@ public class SourceFileTree extends SourceFile {
             replacementNodeCopy.setData(NODEKEY_ID, null);
             
             Map<Integer, Node> nodesToReplace = Collections.singletonMap(ID, replacementNodeCopy);
-            SourceFileTree sf = new SourceFileTree(this, nodesToReplace);
-            
-            return sf;
+
+            return new SourceFileTree(this, nodesToReplace);
         }
     }
     
@@ -748,8 +747,7 @@ public class SourceFileTree extends SourceFile {
      * @return the clone
      * */
     private static CompilationUnit cloneCompilationUnitWithIDs(CompilationUnit cu) {
-        CompilationUnit rval = (CompilationUnit)(cu.accept(new CloneVisitorCopyIDs(), null));
-        return rval;
+        return (CompilationUnit)(cu.accept(new CloneVisitorCopyIDs(), null));
     }
     
     /**
@@ -758,8 +756,7 @@ public class SourceFileTree extends SourceFile {
      * @return the clone
      */
     private static CompilationUnit cloneCompilationUnitWithIDs(CompilationUnit cu, Map<Integer, Node> nodesToReplace) {
-        CompilationUnit rval = (CompilationUnit)(cu.accept(new CloneVisitorCopyIDs(nodesToReplace), null));
-        return rval;
+        return (CompilationUnit)(cu.accept(new CloneVisitorCopyIDs(nodesToReplace), null));
     }
 
     

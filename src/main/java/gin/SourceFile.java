@@ -93,9 +93,8 @@ public abstract class SourceFile {
     public String getFilename() {
         String base = (new File(".")).getAbsolutePath();
         base = StringUtils.chop(base);
-        String filePath = (new File(this.filename)).getAbsolutePath();        
-        String result = StringUtils.substringAfter(filePath, base);
-        return result;        
+        String filePath = (new File(this.filename)).getAbsolutePath();
+        return StringUtils.substringAfter(filePath, base);
     }
     
     /**
