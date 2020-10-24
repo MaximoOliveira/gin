@@ -1,14 +1,14 @@
 package gin.test;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.Executable;
-import java.lang.annotation.Annotation;
-import java.util.Map;
-
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Request;
 import org.pmw.tinylog.Logger;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Executable;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.util.Map;
 
 // see https://stackoverflow.com/questions/24319697/java-lang-exception-no-runnable-methods-exception-in-running-junits/24319836
 // timeout annotation based on: https://gist.github.com/henrrich/185503f10cbb2499a0dc75ec4c29c8f2 and https://www.baeldung.com/java-reflection-change-annotation-params

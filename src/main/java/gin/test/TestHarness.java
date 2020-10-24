@@ -1,17 +1,17 @@
 package gin.test;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.text.ParseException;
-
 import com.sampullara.cli.Args;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Request;
 import org.pmw.tinylog.Logger;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.text.ParseException;
 
 /** 
  * Runs a given test request. Uses sockets to communicate with ExternalTestRunner.
